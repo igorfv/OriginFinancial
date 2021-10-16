@@ -39,6 +39,9 @@
     "take-home-e2e": {
       "tags": [],
       "implicitDependencies": ["take-home"]
+    },
+    "title": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,23 @@
+  .title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #1B31A8;
+  }
+
+  .titleContainer {
+    margin: 32px 0 24px;
+  }
+
+@media (min-width: 560px) {
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .titleContainer {
+    margin: 48px 0 24px;
+  }
+}

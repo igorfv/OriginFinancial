@@ -36,3 +36,9 @@ Build with `pnpm build`
 #### Is NX an overkill for such a small project?
 **YES**, definitly.  
 When I need to do any project for an interview I'll either go completly on my confort zone or I'll take the opotunity to learn a technology that I was keeping an eye on for some time. In this case I decided for the second.
+
+## Tech debts
+- CSS: Hardcoded sizes (media query, fonts, etc colors, ect. - Create a basic UI lib for common styling
+- Libs folder been used as components instead of grouping by type. As the project grow it's a good idea to create some groups so this folder does not get overwhelmingly big.
+  - Group header, footer, main container under Layout.
+  - Group titles and other typography components under Typography

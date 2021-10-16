@@ -1,10 +1,12 @@
+import Title from '@origin-financial/title'
+
 export function Index() {
   return (
-    <div>Hello</div>
+    <Title>Let&lsquo;s plan your <strong>saving goal.</strong></Title>
   );
 }
 
-interface IMeta {
+export interface IMeta {
   title: string,
   description: string,
 }
@@ -14,7 +16,7 @@ Index.getInitialProps = async () => {
     title: 'Origin - Buy a house',
     description: 'Plan your saving goal',
   }
-  
+
   return {
     meta,
   }

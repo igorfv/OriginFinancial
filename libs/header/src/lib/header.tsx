@@ -7,10 +7,10 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   return (
     <header className={styles.header}>
-      <h1>
+      <div>
         <span className={styles.hiddenTitle}>origin</span>
         <Logo title="Origin" className={styles.logo} />
-      </h1>
+      </div>
     </header>
   );
 }

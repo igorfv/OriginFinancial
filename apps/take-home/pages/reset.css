@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-html, 
+html,
 body {
   height: 100%;
 }
@@ -16,4 +16,9 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 12px;
   line-height: 16px;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 600;
 }

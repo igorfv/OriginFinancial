@@ -6,4 +6,7 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/layout',
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/src/__mocks__/svgrMock.js',
+  },
 };

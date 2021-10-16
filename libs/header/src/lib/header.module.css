@@ -1,22 +1,28 @@
 .header {
-    background-color: #fff;
-    height: 56px;
-    padding: 16px;
+  background-color: #fff;
+  height: 56px;
+  padding: 16px;
 }
 
 .logo {
-    width: 75px;
-    height: 24px;
+  width: 75px;
+  height: 24px;
+}
+
+.hiddenTitle {
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline-block;
 }
 
 @media (min-width: 1024px) {
-    .header {
-        height: 80px;
-        padding: 24px 56px;
-    }
+  .header {
+    height: 80px;
+    padding: 24px 56px;
+  }
 
-    .logo {
-        width: 100px;
-        height: 32px;
-    }
+  .logo {
+    width: 100px;
+    height: 32px;
+  }
 }

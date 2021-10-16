@@ -3,13 +3,16 @@ import Head from 'next/head';
 
 import Header from '@origin-financial/header'
 
-import styles from './layout.module.css';
+import styles from './layout.module.css'
+
 
 function CustomApp({ Component, pageProps }: AppProps) {
+  const { meta, ...props } = pageProps
   return (
     <>
       <Head>
-        <title>Origin - Build a house</title>
+        <title>{ meta.title }</title>
+        <meta name="description" content={ meta.description } />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -27,10 +30,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#F4F8FA" />
       </Head>
+      
       <div className={styles.appContainer}>
         <Header />
         <main className={styles.main}>
-          <Component {...pageProps} />
+          <Component {...props} />
         </main>
       </div>
     </>

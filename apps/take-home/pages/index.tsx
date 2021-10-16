@@ -4,4 +4,20 @@ export function Index() {
   );
 }
 
+interface IMeta {
+  title: string,
+  description: string,
+}
+
+Index.getInitialProps = async () => {
+  const meta: IMeta = {
+    title: 'Origin - Buy a house',
+    description: 'Plan your saving goal',
+  }
+  
+  return {
+    meta,
+  }
+}
+
 export default Index;

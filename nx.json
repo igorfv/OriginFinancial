@@ -27,6 +27,12 @@
     ]
   },
   "projects": {
+    "header": {
+      "tags": []
+    },
+    "layout": {
+      "tags": []
+    },
     "take-home": {
       "tags": []
     },

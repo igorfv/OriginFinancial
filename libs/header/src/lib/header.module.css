@@ -1,0 +1,22 @@
+.header {
+    background-color: #fff;
+    height: 56px;
+    padding: 16px;
+}
+
+.logo {
+    width: 75px;
+    height: 24px;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        height: 80px;
+        padding: 24px 56px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 32px;
+    }
+}

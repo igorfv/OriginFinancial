@@ -1,6 +1,50 @@
 {
   "version": 2,
   "projects": {
+    "header": {
+      "root": "libs/header",
+      "sourceRoot": "libs/header/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/header/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/header"],
+          "options": {
+            "jestConfig": "libs/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "layout": {
+      "root": "libs/layout",
+      "sourceRoot": "libs/layout/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/layout/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/layout"],
+          "options": {
+            "jestConfig": "libs/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "take-home": {
       "root": "apps/take-home",
       "sourceRoot": "apps/take-home",

@@ -1,4 +1,4 @@
-/* As simple as it can be reset */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Work+Sans:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -13,4 +13,7 @@ body {
 
 body {
     background-color: #F4F8FA;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
 }

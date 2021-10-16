@@ -1,29 +1,14 @@
 # Take home assignement
 ## How to run
-Install pnpm and nx if you don't have it already
-```
-npm i -g pnpm nx
-```
+Install pnpm and nx if you don't have it already with `npm i -g pnpm nx`
 
-Install dependencies
-```
-pnpm install
-```
+Install dependencies with `pnpm install`
 
-Run
-```
-pnpm start
-```
+Run the main app with `pnpm start` or a target app with `pnpm start <target-name>`
 
-Test
-```
-pnpm test
-```
+Test the affected files with `pnpm test` or everything with `pnpm run test-ci`
 
-Build
-```
-pnpm build
-```
+Build with `pnpm build`
 
 ## About the technical choices
 ### PNPM

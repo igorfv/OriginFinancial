@@ -25,14 +25,14 @@
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
       "rules": {
-        "semi": ["never"]
+        "semi": [0, "never"]
       }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {
-        "semi": ["never"]
+        "semi": [0, "never"]
       }
     }
   ]

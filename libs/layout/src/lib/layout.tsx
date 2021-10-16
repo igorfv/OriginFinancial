@@ -29,7 +29,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <div className={styles.appContainer}>
         <Header />
-        <main>
+        <main className={styles.main}>
           <Component {...pageProps} />
         </main>
       </div>

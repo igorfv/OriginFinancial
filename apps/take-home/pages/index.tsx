@@ -1,8 +1,16 @@
 import Title from '@origin-financial/title'
+import SavingsSimulator from '@origin-financial/savings-simulator'
+
+import { ReactComponent as Icon } from './buy-a-house.svg';
 
 export function Index() {
+  const icon = (<Icon title="buy-a-house"/>)
+
   return (
-    <Title>Let&lsquo;s plan your <strong>saving goal.</strong></Title>
+    <>
+      <Title>Let&lsquo;s plan your <strong>saving goal.</strong></Title>
+      <SavingsSimulator icon={icon} goal='Buy a house' />
+    </>
   );
 }
 

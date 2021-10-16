@@ -17,6 +17,9 @@
     "paths": {
       "@origin-financial/header": ["libs/header/src/index.ts"],
       "@origin-financial/layout": ["libs/layout/src/index.ts"],
+      "@origin-financial/savings-simulator": [
+        "libs/savings-simulator/src/index.ts"
+      ],
       "@origin-financial/title": ["libs/title/src/index.ts"]
     }
   },

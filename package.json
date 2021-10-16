@@ -6,10 +6,10 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx affected:test",
-    "test-ci": "nx test",
+    "test-ci": "nx run-many --all --target=test --parallel",
     "e2e": "nx e2e take-home-e2e",
     "lint": "nx affected:lint",
-    "lint-ci": "nx lint -- --ci",
+    "lint-ci": "nx run-many --all --target=lint --parallel",
     "prepare": "husky install"
   },
   "private": true,

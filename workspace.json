@@ -45,6 +45,28 @@
         }
       }
     },
+    "savings-simulator": {
+      "root": "libs/savings-simulator",
+      "sourceRoot": "libs/savings-simulator/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/savings-simulator/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/savings-simulator"],
+          "options": {
+            "jestConfig": "libs/savings-simulator/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "take-home": {
       "root": "apps/take-home",
       "sourceRoot": "apps/take-home",

@@ -50,6 +50,7 @@ export function Amount({ onChange }: AmountProps) {
           mask={currencyMask}
           name="amount"
           className={styles.input}
+          data-testid="amount-input"
         />
       </label>
     </div>

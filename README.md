@@ -8,6 +8,8 @@ Run the main app with `pnpm start` or a target app with `pnpm start <target-name
 
 Test the affected files with `pnpm test` or everything with `pnpm run test-ci`
 
+Run the E2E test with `pnpm e2e`
+
 Lint runs every time you commit but you can run it manually to check the affected files with `pnpm lint` or everything with `pnpm run lint-ci`
 
 Build with `pnpm build`
@@ -49,3 +51,4 @@ It was only tested on Chrome 94.0.4606.81
   - Group titles and other typography components under Typography
 - Deduplicate the svgr mock
 - Setup unassert for production build
+- Improve the eslint rules and update the generator to reflect it

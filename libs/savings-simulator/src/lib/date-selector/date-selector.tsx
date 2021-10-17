@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, ChangeEvent, KeyboardEvent } from 'react';
+import { useRef, useState, useEffect, ChangeEvent, KeyboardEvent, MouseEventHandler } from 'react';
 import assert from 'assert';
 import dayjs from 'dayjs';
 import 'dayjs/locale/en';
@@ -21,8 +21,8 @@ export function DateSelector({ onChange }: DateSelectorProps) {
   const inputRef = useRef(null);
   const [numberOfMonths, setNumberOfMonths] = useState(1)
 
-  const preventChanges = (e: ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
+  const preventDefault = (e: any) => {
+    e?.preventDefault()
   }
 
   const updateNumbersOfMonths = (months: number): void => {
@@ -31,6 +31,8 @@ export function DateSelector({ onChange }: DateSelectorProps) {
 
     setNumberOfMonths(numberOfMonths)
     onChange(numberOfMonths)
+
+    if(inputRef.current) (inputRef.current as HTMLInputElement)?.focus()
   }
 
   const handleKeyPress = (e: KeyboardEvent) => {
@@ -49,10 +51,6 @@ export function DateSelector({ onChange }: DateSelectorProps) {
 
     e.preventDefault()
   }
-
-  useEffect((): void => {
-    return;
-  }, [inputRef])
 
   const selectedDate = dayjs()
     .add(numberOfMonths, 'month')
@@ -75,11 +73,11 @@ export function DateSelector({ onChange }: DateSelectorProps) {
             name="reachDate"
             className={styles.input}
             value={numberOfMonths}
-            onChange={preventChanges}
+            onChange={preventDefault}
             onKeyDown={handleKeyPress}
             data-testid="month-input"
           />
-          <div className={styles.dateSelector}>
+          <div className={styles.dateSelector} onMouseDown={preventDefault}>
             <div>
               <button
                 tabIndex={-1}

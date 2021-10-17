@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react'
+import { MouseEvent } from 'react';
 
 import assert from 'assert';
 
@@ -14,18 +14,18 @@ export function ButtonCta({ children, onClick }: ButtonCtaProps) {
   assert(children, [
     'ButtonCta:',
     'Can\' initialize component without a children element',
-  ].join(' '))
+  ].join(' '));
 
   assert(onClick, [
     'ButtonCta:',
     'Can\' initialize component without an onClick function',
-  ].join(' '))
+  ].join(' '));
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    onClick()
-  }
+    onClick();
+  };
 
   return (
     <button className={styles.button} onClick={handleClick}>

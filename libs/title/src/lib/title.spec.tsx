@@ -9,7 +9,7 @@ describe('Title', () => {
   });
 
   it('should display the children', () => {
-    const children = 'test'
+    const children = 'test';
     render(<Title>{children}</Title>);
     expect(screen.getByText(children)).toBeTruthy();
   });

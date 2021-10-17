@@ -14,7 +14,7 @@ describe('Amount', () => {
     const stub = jest.fn();
 
     render(<Amount onChange={stub} />);
-    fireEvent.change(screen.getByRole('textbox'), { target: { value: '123,456,789.00' } })
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: '123,456,789.00' } });
     expect(stub).toBeCalledWith(123456789);
   });
 
@@ -22,7 +22,7 @@ describe('Amount', () => {
     const stub = jest.fn();
 
     render(<Amount onChange={stub} />);
-    fireEvent.change(screen.getByRole('textbox'), { target: { value: '123,456,789.12' } })
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: '123,456,789.12' } });
     expect(stub).toBeCalledWith(123456789.12);
   });
 });

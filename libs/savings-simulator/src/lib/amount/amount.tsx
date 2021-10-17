@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import assert from 'assert';
-import MaskedInput from 'react-text-mask'
-import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import MaskedInput from 'react-text-mask';
+import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 
 import styles from './amount.module.css';
 
@@ -21,24 +21,24 @@ const defaultMaskOptions = {
   integerLimit: 12,
   allowNegative: false,
   allowLeadingZeroes: false,
-}
+};
 
 export function Amount({ onChange }: AmountProps) {
   assert(onChange, [
     'Amount:',
     'Can\' initialize component without an onChange function',
-  ].join(' '))
+  ].join(' '));
 
-  const inputRef = useRef(null)
-  const currencyMask = createNumberMask(defaultMaskOptions)
+  const inputRef = useRef(null);
+  const currencyMask = createNumberMask(defaultMaskOptions);
 
   const handleChange = (e: InputEvent) => {
-    const el = e.target as HTMLTextAreaElement
-    const stringAmount: string = el.value
-    const amount = Number(stringAmount.replace(/,/g, ''))
+    const el = e.target as HTMLTextAreaElement;
+    const stringAmount: string = el.value;
+    const amount = Number(stringAmount.replace(/,/g, ''));
 
-    onChange(amount)
-  }
+    onChange(amount);
+  };
 
   return (
     <div className={styles.container}>

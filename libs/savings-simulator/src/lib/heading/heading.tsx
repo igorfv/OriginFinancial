@@ -12,12 +12,12 @@ export function Heading({ icon, goal }: HeadingProps) {
   assert((icon !== undefined && icon !== null), [
     'SavingsSimulator:',
     'Can\'t initialize the component without an icon'
-  ].join(' '))
+  ].join(' '));
 
   assert((goal !== undefined && goal !== null), [
     'SavingsSimulator:',
     'Can\'t initialize the component without a goal'
-  ].join(' '))
+  ].join(' '));
 
   return (
     <div className={styles.container}>

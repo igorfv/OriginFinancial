@@ -1,3 +1,3 @@
-import './reset.css'
+import './reset.css';
 
-export { default } from '@origin-financial/layout'
+export { default } from '@origin-financial/layout';

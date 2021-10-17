@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import Heading from './heading/heading';
-import Amount from './amount/amount'
-import DateSelector from './date-selector/date-selector'
+import Amount from './amount/amount';
+import DateSelector from './date-selector/date-selector';
+import Summary from './summary/summary';
 import ButtonCta from './button-cta/button-cta';
 
 import styles from './savings-simulator.module.css';
@@ -12,10 +15,12 @@ export interface SavingsSimulatorProps {
 }
 
 export function SavingsSimulator({ icon, goal }: SavingsSimulatorProps) {
-  const handleClick = () => console.log('do something when button is clicked')
+  const [amount, setAmount] = useState<number>(0);
 
-  const handleAmountChanges = () => { return; }
-  const handleDateChanges = () => { return; }
+  const handleClick = () => console.log('do something when button is clicked');
+
+  const handleAmountChanges = (amount: number) => { setAmount(amount); };
+  const handleDateChanges = () => { return; };
 
   return (
     <div className={styles.container}>
@@ -25,6 +30,7 @@ export function SavingsSimulator({ icon, goal }: SavingsSimulatorProps) {
           <Amount onChange={handleAmountChanges} />
           <DateSelector onChange={handleDateChanges} />
         </div>
+        <Summary amount={amount} numberOfMonths={48} />
       </div>
       <div className={styles.ctaSpacer}>
         <ButtonCta onClick={handleClick}>Confirm</ButtonCta>

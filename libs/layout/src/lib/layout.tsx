@@ -1,13 +1,13 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import Header from '@origin-financial/header'
+import Header from '@origin-financial/header';
 
-import styles from './layout.module.css'
+import styles from './layout.module.css';
 
 
 function CustomApp({ Component, pageProps }: AppProps) {
-  const { meta, ...props } = pageProps
+  const { meta, ...props } = pageProps;
   return (
     <>
       <Head>

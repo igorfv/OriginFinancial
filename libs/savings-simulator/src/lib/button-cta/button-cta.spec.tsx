@@ -18,7 +18,7 @@ describe('ButtonCta', () => {
     fireEvent(screen.getByRole('button'), new MouseEvent('click', {
       bubbles: true,
       cancelable: true,
-    }))
+    }));
 
     expect(stub).toBeCalled();
   });

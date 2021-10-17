@@ -8,8 +8,6 @@ Run the main app with `pnpm start` or a target app with `pnpm start <target-name
 
 Test the affected files with `pnpm test` or everything with `pnpm run test-ci`
 
-Run the E2E test with `pnpm e2e`
-
 Lint runs every time you commit but you can run it manually to check the affected files with `pnpm lint` or everything with `pnpm run lint-ci`
 
 Build with `pnpm build`
@@ -45,10 +43,11 @@ When I need to do any project for an interview I'll either go completely on my c
 It was only tested on Chrome 94.0.4606.81
 
 ## Tech debts
-- CSS: Hardcoded sizes (media query, fonts, etc colors, ect. - Create a basic UI lib for common styling
-- Libs folder been used as components instead of grouping by type. As the project grow it's a good idea to create some groups so this folder does not get overwhelmingly big.
+- CSS: Hardcoded sizes (media query, fonts, etc colors, etc) - Create a basic UI lib for common styling
+- Libs folder been used as components instead of grouping by type. As the project grows it's a good idea to create some groups so this folder does not get overwhelmingly big.
   - Group header, footer, main container under Layout.
   - Group titles and other typography components under Typography
 - Deduplicate the svgr mock
 - Setup unassert for production build
 - Improve the eslint rules and update the generator to reflect it
+- Write E2E tests

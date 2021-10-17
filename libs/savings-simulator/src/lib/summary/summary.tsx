@@ -38,22 +38,20 @@ export function Summary({ amount, numberOfMonths }: SummaryProps) {
 
   const intlEndDate = dayjs()
     .add(numberOfMonths, 'month')
-    .locale('de')
+    .locale('en')
     .format('MMMM YYYY');
-
-    console.log(amount, numberOfMonths, isHidden);
 
   return (
     <div className={cn(
       styles.wrapper,
       isHidden && styles.hidden
-    )}>
+    )} data-testid="wrapper">
       <div className={styles.container}>
         <div className={styles.monthlyContainer}>
           <div className={styles.monthly}>Monthly amount</div>
           <div className={styles.monthlyAmount}>{intlMonthlyAmount}</div>
         </div>
-        <div className={styles.summary}>
+        <div className={styles.summary} data-testid="summary-text">
           You’re planning <strong>{numberOfMonths}</strong> monthly <strong>{depositText}</strong> to reach your <strong>{intlAmount}</strong> goal by <strong>{intlEndDate}.</strong>
         </div>
       </div>

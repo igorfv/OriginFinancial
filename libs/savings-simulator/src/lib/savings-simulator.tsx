@@ -16,11 +16,12 @@ export interface SavingsSimulatorProps {
 
 export function SavingsSimulator({ icon, goal }: SavingsSimulatorProps) {
   const [amount, setAmount] = useState<number>(0);
+  const [numberOfMonths, setNumberOfMonths] = useState(1)
 
   const handleClick = () => console.log('do something when button is clicked');
 
   const handleAmountChanges = (amount: number) => { setAmount(amount); };
-  const handleDateChanges = () => { return; };
+  const handleDateChanges = (months: number) => { setNumberOfMonths(months); };
 
   return (
     <div className={styles.container}>
@@ -30,7 +31,7 @@ export function SavingsSimulator({ icon, goal }: SavingsSimulatorProps) {
           <Amount onChange={handleAmountChanges} />
           <DateSelector onChange={handleDateChanges} />
         </div>
-        <Summary amount={amount} numberOfMonths={48} />
+        <Summary amount={amount} numberOfMonths={numberOfMonths} />
       </div>
       <div className={styles.ctaSpacer}>
         <ButtonCta onClick={handleClick}>Confirm</ButtonCta>

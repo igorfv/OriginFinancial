@@ -35,7 +35,7 @@
 .monthlyAmount {
   font-family: Rubik, sans-serif;
   font-size: 24px;
-  line-height: 120%;
+  line-height: 1.2em;
   font-weight: 500;
   color: #0079FF;
 }

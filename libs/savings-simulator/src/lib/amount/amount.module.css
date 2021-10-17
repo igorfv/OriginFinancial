@@ -22,9 +22,17 @@
   background: url(./dollar-sign.png) 17px 50% no-repeat;
 }
 
+.input:focus {
+  outline-color: orange;
+}
+
 @media (min-width: 560px) {
   .container {
     flex-basis: 272px;
     flex-shrink: 0;
+  }
+
+  .input {
+    font-size: 24px;
   }
 }

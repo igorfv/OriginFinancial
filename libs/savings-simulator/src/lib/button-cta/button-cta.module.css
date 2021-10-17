@@ -9,4 +9,8 @@
   font-weight: 600;
   color: #ffffff;
   border: 0;
+  cursor: pointer;
+}
+.button:focus {
+  outline-color: orange;
 }

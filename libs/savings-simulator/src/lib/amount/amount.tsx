@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { ChangeEvent, useRef } from 'react';
 import assert from 'assert';
 import MaskedInput from 'react-text-mask';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
@@ -32,8 +32,8 @@ export function Amount({ onChange }: AmountProps) {
   const inputRef = useRef(null);
   const currencyMask = createNumberMask(defaultMaskOptions);
 
-  const handleChange = (e: InputEvent) => {
-    const el = e.target as HTMLTextAreaElement;
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const el = e.target;
     const stringAmount: string = el.value;
     const amount = Number(stringAmount.replace(/,/g, ''));
 

@@ -30,6 +30,6 @@ describe('Summary', () => {
 
   it('should hide the summary when amount is $0', () => {
     render(<Summary amount={0} numberOfMonths={48} />);
-    expect(screen.getByTestId('wrapper').classList).toContain('hidden');
+    expect(screen.getByTestId('summary-wrapper').classList).toContain('hidden');
   });
 });

@@ -45,7 +45,7 @@ export function Summary({ amount, numberOfMonths }: SummaryProps) {
     <div className={cn(
       styles.wrapper,
       isHidden && styles.hidden
-    )} data-testid="wrapper">
+    )} data-testid="summary-wrapper">
       <div className={styles.container}>
         <div className={styles.monthlyContainer}>
           <div className={styles.monthly}>Monthly amount</div>

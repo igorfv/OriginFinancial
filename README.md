@@ -40,7 +40,7 @@ Build with `pnpm build`
 When I need to do any project for an interview I'll either go completely on my conform zone or I'll take the opportunity to learn a technology that I was keeping an eye on for some time. In this case I decided for the second.
 
 ## Limitations
-
+It was only tested on Chrome 94.0.4606.81
 
 ## Tech debts
 - CSS: Hardcoded sizes (media query, fonts, etc colors, ect. - Create a basic UI lib for common styling

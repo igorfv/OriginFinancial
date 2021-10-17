@@ -11,9 +11,14 @@ export interface ButtonCtaProps {
 }
 
 export function ButtonCta({ children, onClick }: ButtonCtaProps) {
-  assert(children && onClick, [
+  assert(children, [
     'ButtonCta:',
-    'Can\' initialize component without a children element and a onClick function',
+    'Can\' initialize component without a children element',
+  ].join(' '))
+
+  assert(onClick, [
+    'ButtonCta:',
+    'Can\' initialize component without an onClick function',
   ].join(' '))
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {

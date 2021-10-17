@@ -1,4 +1,4 @@
-# Take home assignement
+# Take home assignment
 ## How to run
 Install pnpm and nx if you don't have it already with `npm i -g pnpm nx`
 
@@ -8,7 +8,7 @@ Run the main app with `pnpm start` or a target app with `pnpm start <target-name
 
 Test the affected files with `pnpm test` or everything with `pnpm run test-ci`
 
-Lint runs everytime you commit but you can run it manually to check the affected files with `pnpm lint` or everything with `pnpm run lint-ci`
+Lint runs every time you commit but you can run it manually to check the affected files with `pnpm lint` or everything with `pnpm run lint-ci`
 
 Build with `pnpm build`
 
@@ -18,7 +18,7 @@ Build with `pnpm build`
 - [pnpm: Motivation](https://pnpm.io/motivation)
 
 #### tl;dr;
-- Faster, speacially on a big project
+- Faster, specially on a big project
 - More secure
 - Can handle multiple versions of the same package without overhead
 - Works greatly with monorepos
@@ -36,8 +36,11 @@ Build with `pnpm build`
 - Ownership management
 
 #### Is NX an overkill for such a small project?
-**YES**, definitly.  
-When I need to do any project for an interview I'll either go completly on my confort zone or I'll take the opotunity to learn a technology that I was keeping an eye on for some time. In this case I decided for the second.
+**YES**, definitely.  
+When I need to do any project for an interview I'll either go completely on my conform zone or I'll take the opportunity to learn a technology that I was keeping an eye on for some time. In this case I decided for the second.
+
+## Limitations
+
 
 ## Tech debts
 - CSS: Hardcoded sizes (media query, fonts, etc colors, ect. - Create a basic UI lib for common styling
